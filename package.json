@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/MJohnson030/the-pokemon-experience/issues"
   },
-  "homepage": "https://github.com/MJohnson030/the-pokemon-experience#readme"
+  "homepage": "https://github.com/MJohnson030/the-pokemon-experience#readme",
+  "dependencies": {
+    "10": "0.0.1",
+    "express": "^4.17.1"
+  }
 }
