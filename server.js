@@ -1,15 +1,20 @@
-const express = require('express');
+const express =  require('express');
 const app = express();
-const hbs = require('express-handlebars');
+
 
 app.use(express.static('public'))
 
-app.engine('handlebars', hbs());
-app.set('view engine', 'handlebars');
+const hbs = require('express-handlebars')({
+    extname: '.hbs',
+  });
+  app.engine('hbs', hbs);
+  app.set('view engine', 'hbs');
 
 // Routing
 app.get('/',  (req, res) => {
-    res.render('index', { layout: false });
+    res.render('index',
+     { layout: false }
+    );
 });
 
 app.get('/water',  (req, res) => {
@@ -28,6 +33,6 @@ app.get('/fire',  (req, res) => {
     res.render('fire', { layout: false });
 });
 
-app.listen(8080, () => {
-    console.log('Server is starting at port ', 8080);
+app.listen(8000, () => {
+    console.log('Server is starting at port ', 8000);
 });
